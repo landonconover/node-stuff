@@ -1,0 +1,25 @@
+{
+  "name": "node-stuff",
+  "version": "0.0.0",
+  "homepage": "https://github.com/landonconover/node-stuff",
+  "authors": [
+    "Landon Conover <landon.conover@gmail.com>"
+  ],
+  "description": "This is the bower PACKAGE!",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.24",
+    "bootstrap": "~3.2.0"
+  }
+}
