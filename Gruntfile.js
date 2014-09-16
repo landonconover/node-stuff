@@ -3,13 +3,13 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    // Metadata.
-    pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
+    // // Metadata.
+    // pkg: grunt.file.readJSON('package.json'),
+    // banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
+    //   '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
+    //   '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
+    //   '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
+    //   ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
     concat: {
       distCss: {
@@ -17,12 +17,13 @@ module.exports = function(grunt) {
         dest: 'public/css/app.min.css'
       },
       distJs: {
-        src: ['bower_components/angular/angular.min.js', 'bower_components/jquery/jquery.min.js', 'public/js/*.js'],
+        src: ['bower_components/angular/angular.min.js', 'bower_components/jquery/jquery.min.js', 'public/js/scripts.min.js'],
         dest: 'public/js/app.min.js'
       }
     },
     clean: {
       js: ["public/js/app.min.js"],
+      scripts: ["public/js/scripts.min.js"],
       css: ["public/css/app.min.css"]
     },
     uglify: { // This specifies which plugin we're configuring
@@ -31,7 +32,7 @@ module.exports = function(grunt) {
             sourceMap: true // This option says that we want a source map printed out
           },
           files: { // This is the configuration for the task that specifies destination and source.
-            'public/js/app.min.js': ['src/scripts/**/*.js']
+            'public/js/scripts.min.js': ['public/js/**/*.js']
           }
         }
       }
