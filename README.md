@@ -1,6 +1,6 @@
 # node-stuff
 
-A collection of Node based tutorials and information.
+A collection of Node based tutorials and information. Use these to complete the assignment. They are very helpful! :thumbsup:
 
 * [npm](NPM.md)
 * [bower](BOWER.md)
